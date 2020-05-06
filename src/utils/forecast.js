@@ -11,8 +11,8 @@ const forecast = (latitude, longitude, callback) =>{
       callback("Results not found for given search, Please try again with another search", undefined)
     } else{
       callback(undefined,{
-        Temperature: body.current.temperature,
-        Feels_Like: body.current.feelslike,
+        Temperature: body.current.temperature+" °C",
+        Feels_Like: body.current.feelslike+" °C",
         Condition: body.current.weather_descriptions[0]
       })
     }
